@@ -289,6 +289,34 @@
     <h5>titre 5</h5>
     <h6>titre 6</h6>
     ```
+    function chapitre(nom,nb_page,position){
+    this.nom=nom;
+    this.nb_page=nb_page;
+    this.position=position;
+}
+chapitre.prototype.chapitrelong=function(){
+    if (Object.keys(nb_page).length>100) return true;
+    else return false;
+}
+function livre(id,titre,prix,chapitre){
+    this.id=id;
+    this.titre=titre;
+    this.prix=prix;
+    this.chapire=chapitre;
+}
+livre.prototype.sauterlongschapitre=function(){
+    for(let i=0;i<this.chapitre.length;i++){
+        if(this.chapitre[i].nb_page>100) this.chapitre.splice(i,1);
+    }
+}
+livre.prototype.trierchapitre=function(position){
+
+
+}
+///////////
+for ($i=0;$i<7;i++){
+    echo "h{$i}> titre {$i}</h{$i}>\n";
+}
 
 ## Remarques
 - Pour chaque question dans la partie QCM :
